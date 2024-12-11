@@ -1,0 +1,5 @@
+.env
+.vscode/
+docker/.env
+proxy/list.txt
+.DS_Store

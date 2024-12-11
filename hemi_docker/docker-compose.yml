@@ -1,0 +1,21 @@
+services:
+  popmd1:
+    image: toanbk/heminetwork:latest
+    environment:
+      - POPM_BTC_PRIVKEY=${POPM_BTC_PRIVKEY_001}
+      - POPM_STATIC_FEE=${POPM_STATIC_FEE}
+      - http_proxy=${PROXY_001}
+      - HTTP_PROXY=${PROXY_001}
+      - https_proxy=${PROXY_001}
+      - HTTPS_PROXY=${PROXY_001}
+      - no_proxy=${NO_PROXY}
+      - NO_PROXY=${NO_PROXY}
+    restart: always
+
+  popmd2:
+    image: toanbk/heminetwork:latest
+    environment:
+      - POPM_BTC_PRIVKEY=${POPM_BTC_PRIVKEY_002}
+      - POPM_STATIC_FEE=${POPM_STATIC_FEE}
+      # - POPM_BFG_URL=${POPM_BFG_URL}
+    restart: always
